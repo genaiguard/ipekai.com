@@ -3,100 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPEK AI LLC - Innovative AI Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>IPEK AI - Intelligent AI Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #5D64FD; /* A modern, slightly desaturated blue/purple */
+            --secondary-color: #4A00E0; /* A deeper purple for gradient */
+            --text-dark: #2c3e50; /* Rich dark blue/grey for text */
+            --text-light: #57606f; /* Softer grey for less prominent text */
+            --background-main: #fdfdff; /* Very light, almost white */
+            --card-background: #ffffff;
+            --footer-background: #232830; /* Darker footer */
+        }
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6; /* Slightly softer off-white */
-            color: #4a4a4a; /* Darker grey for main text */
+            background-color: var(--background-main);
+            color: var(--text-dark);
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .navbar {
-            background-color: #ffffff;
-            padding: 1.2em 2.5em;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            text-align: center;
-            position: sticky; /* Sticky navbar */
+            background-color: var(--card-background);
+            padding: 1.2em 3em;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: left; /* Align company name to the left */
+            position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid #e0e0e0;
         }
         .navbar h1 {
             margin: 0;
-            color: #333; /* Darker, more standard heading color */
-            font-size: 1.8em; /* Slightly reduced for a sleeker look */
+            color: var(--primary-color);
+            font-size: 1.7em;
             font-weight: 600;
         }
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Modern gradient */
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: #ffffff;
-            padding: 4em 2em;
+            padding: 5em 2em;
             text-align: center;
-            border-bottom-left-radius: 20px; /* Curved bottom edge */
-            border-bottom-right-radius: 20px;
         }
         .hero h2 {
             margin-top: 0;
-            font-size: 2.8em;
+            font-size: 3em; /* Increased size */
             font-weight: 700;
             letter-spacing: 0.5px;
+            margin-bottom: 0.4em;
         }
         .hero p {
-            font-size: 1.15em;
-            max-width: 750px;
-            margin: 1em auto 0;
+            font-size: 1.2em; /* Increased size */
+            max-width: 800px;
+            margin: 0 auto;
             font-weight: 300;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         .container {
             width: 90%;
-            max-width: 1100px; /* Slightly narrower for better focus */
-            margin: 3em auto;
+            max-width: 1150px;
+            margin: 3.5em auto;
             padding: 0 15px;
         }
         .section-title {
             text-align: center;
-            font-size: 2.2em;
-            color: #333;
-            margin-bottom: 1.8em;
+            font-size: 2.4em; /* Increased size */
+            color: var(--text-dark);
+            margin-bottom: 2em;
             font-weight: 600;
             position: relative;
         }
-        .section-title::after { /* Underline accent for section title */
+        .section-title::after {
             content: '';
             display: block;
-            width: 60px;
-            height: 3px;
-            background-color: #667eea; /* Accent color from gradient */
-            margin: 0.3em auto 0;
+            width: 70px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0.4em auto 0;
             border-radius: 2px;
         }
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5em;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Slightly larger min card width */
+            gap: 3em;
         }
         .product-card {
-            background-color: #ffffff;
-            border-radius: 12px; /* More rounded corners */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Softer, more diffused shadow */
-            padding: 2em;
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06); /* More subtle, spread out shadow */
+            padding: 2.5em;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             display: flex;
             flex-direction: column;
+            border: 1px solid #e8e8e8; /* Faint border */
         }
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
         }
         .product-card h3 {
             margin-top: 0;
-            color: #667eea; /* Using gradient start color */
-            font-size: 1.6em;
+            color: var(--primary-color);
+            font-size: 1.7em;
             font-weight: 600;
-            margin-bottom: 0.7em;
+            margin-bottom: 0.8em;
         }
         .product-card h3 a {
             color: inherit;
@@ -106,96 +118,101 @@
             text-decoration: underline;
         }
         .product-card p.description {
-            font-size: 0.98em;
-            color: #555;
-            margin-bottom: 1.2em;
-            flex-grow: 1; /* Allows description to take available space */
+            font-size: 1em;
+            color: var(--text-light);
+            margin-bottom: 1.5em;
+            flex-grow: 1;
         }
         .product-card .features {
             list-style-type: none;
             padding-left: 0;
-            font-size: 0.9em;
-            color: #4a4a4a;
+            font-size: 0.95em;
+            color: var(--text-dark);
         }
         .product-card .features li {
-            padding-left: 1.8em; /* More space for icon */
+            padding-left: 2em; 
             position: relative;
-            margin-bottom: 0.8em;
+            margin-bottom: 0.9em;
             display: flex;
-            align-items: center; /* Vertically align icon and text */
+            align-items: center;
         }
-        .product-card .features li::before { /* Using different icons for features */
-            font-family: "Times New Roman", Times, serif; /* Fallback for icons */
-            color: #667eea;
+        .product-card .features li::before { 
+            font-family: inherit; /* Use Poppins for consistency if possible, or system UI as fallback */
+            color: var(--primary-color);
             position: absolute;
             left: 0;
-            font-weight: bold;
-            font-size: 1.1em;
+            font-weight: 700; /* Bold checkmark/icon */
+            font-size: 1.2em;
             line-height: 1;
         }
-        /* Specific icons for features - using simple Unicode for broad compatibility */
-        .product-card:nth-child(1) .features li:nth-child(1)::before { content: '\2728'; } /* Sparkle for AI conversion */
-        .product-card:nth-child(1) .features li:nth-child(2)::before { content: '\1F4F7'; } /* Camera for photo types */
-        .product-card:nth-child(1) .features li:nth-child(3)::before { content: '\1F50D'; } /* Magnifying glass for process */
-        .product-card:nth-child(1) .features li:nth-child(4)::before { content: '\1F4B0'; } /* Money bag for free credits */
+        /* Unicode icons - can be replaced with SVGs or an icon font for more polish */
+        .product-card:nth-child(1) .features li:nth-child(1)::before { content: '\2728'; } /* Sparkle */
+        .product-card:nth-child(1) .features li:nth-child(2)::before { content: '\1F4DD'; } /* Memo/Print */
+        .product-card:nth-child(1) .features li:nth-child(3)::before { content: '\1F50E'; } /* Magnifying glass right */
+        .product-card:nth-child(1) .features li:nth-child(4)::before { content: '\1F4B8'; } /* Money with wings */
 
-        .product-card:nth-child(2) .features li:nth-child(1)::before { content: '\1F310'; } /* Globe for any website */
-        .product-card:nth-child(2) .features li:nth-child(2)::before { content: '\1F9E0'; } /* Brain for AI understanding */
-        .product-card:nth-child(2) .features li:nth-child(3)::before { content: '\2709\FE0F'; } /* Envelope for notifications */
-        .product-card:nth-child(2) .features li:nth-child(4)::before { content: '\1F52C'; } /* Microscope for custom rules */
+        .product-card:nth-child(2) .features li:nth-child(1)::before { content: '\1F310'; } /* Globe */
+        .product-card:nth-child(2) .features li:nth-child(2)::before { content: '\1F9E0'; } /* Brain */
+        .product-card:nth-child(2) .features li:nth-child(3)::before { content: '\1F4E7'; } /* Email */
+        .product-card:nth-child(2) .features li:nth-child(4)::before { content: '\2699\FE0F'; } /* Gear */
 
         footer {
             text-align: center;
-            padding: 2.5em 1.5em;
+            padding: 3em 1.5em;
             margin-top: 4em;
-            background-color: #333;
-            color: #e0e0e0;
-            font-size: 0.9em;
+            background-color: var(--footer-background);
+            color: #bdc3c7; /* Lighter grey for footer text */
         }
         footer p {
-            margin: 0;
+            margin: 0.5em 0;
+        }
+        footer .mission {
+            font-size: 1.05em;
+            color: #ecf0f1; /* Even lighter for mission */
+            margin-bottom: 1em;
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <h1>IPEK AI LLC</h1>
+        <h1>IPEK AI</h1>
     </nav>
 
     <section class="hero">
-        <h2>Innovating with Artificial Intelligence</h2>
-        <p>Discover our flagship AI-driven products designed to enhance creativity and provide intelligent web monitoring.</p>
+        <h2>IPEK AI: Intelligent Solutions, Real Impact.</h2>
+        <p>IPEK AI develops advanced artificial intelligence platforms that deliver practical benefits and drive innovation.</p>
     </section>
 
     <div class="container">
-        <h2 class="section-title">Our Products</h2>
+        <h2 class="section-title">Our Flagship Platforms</h2>
         <div class="products-grid">
             <div class="product-card">
                 <h3><a href="https://www.storyincolor.com" target="_blank">StoryInColor.com</a></h3>
-                <p class="description">Transform your cherished photos into beautiful, custom coloring pages instantly. Perfect for reliving memories and unleashing creativity for all ages.</p>
+                <p class="description">Transform your photos into custom printable coloring pages. Our AI makes it easy to create unique artwork from your favorite memories.</p>
                 <ul class="features">
-                    <li>AI-powered photo to coloring page conversion</li>
-                    <li>Printable pages for vacations, weddings, pets & more</li>
-                    <li>Easy 3-step process: Upload, Preview, Download</li>
-                    <li>Free starter credits available</li>
+                    <li>Intuitive AI photo-to-coloring conversion</li>
+                    <li>High-quality coloring pages from your photos</li>
+                    <li>Seamless Upload, Customize & Download</li>
+                    <li>Unlock creativity with complimentary starter credits</li>
                 </ul>
             </div>
 
             <div class="product-card">
                 <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor.fyi</a></h3>
-                <p class="description">Stay ahead with AI-powered web content monitoring. Get intelligent alerts for website changes using natural language criteria.</p>
+                <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
                 <ul class="features">
-                    <li>Monitor any website for specific changes</li>
-                    <li>AI understands content like a human</li>
-                    <li>Smart notifications for price drops, stock updates, news</li>
-                    <li>Flexible tracking with custom rules</li>
+                    <li>Comprehensive monitoring for any website</li>
+                    <li>Advanced AI for nuanced content analysis</li>
+                    <li>Actionable alerts: price shifts, new content & more</li>
+                    <li>Highly configurable for tailored intelligence</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 IPEK AI LLC. All rights reserved.</p>
+        <p class="mission">IPEK AI: Building effective AI solutions for today's challenges.</p>
+        <p>&copy; 2024 IPEK AI. All rights reserved.</p>
     </footer>
 </body>
 </html> 
