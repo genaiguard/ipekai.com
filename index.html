@@ -7,169 +7,211 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #5D64FD; /* A modern, slightly desaturated blue/purple */
-            --secondary-color: #4A00E0; /* A deeper purple for gradient */
-            --text-dark: #2c3e50; /* Rich dark blue/grey for text */
-            --text-light: #57606f; /* Softer grey for less prominent text */
-            --background-main: #fdfdff; /* Very light, almost white */
+            --primary-color: #4361ee; /* More refined blue */
+            --secondary-color: #3f37c9; /* Complementary dark blue */
+            --text-dark: #2d3748; /* Rich dark text */
+            --text-light: #718096; /* Medium gray for secondary text */
+            --background-main: #f8fafc; /* Very light background */
             --card-background: #ffffff;
-            --footer-background: #232830; /* Darker footer */
+            --section-background: #f1f5f9; /* Light gray for alternate sections */
+            --footer-background: #2d3748; /* Darker footer */
+            --border-color: #e2e8f0; /* Light border color */
         }
-        body {
-            font-family: 'Poppins', sans-serif;
+        
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
             background-color: var(--background-main);
             color: var(--text-dark);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+        
         .navbar {
             background-color: var(--card-background);
-            padding: 1.2em 3em;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            text-align: left; /* Align company name to the left */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 1.2rem 5%;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+        
         .navbar h1 {
-            margin: 0;
             color: var(--primary-color);
-            font-size: 1.7em;
+            font-size: 1.5rem;
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
+        
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: #ffffff;
-            padding: 5em 2em;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5rem 1.5rem;
             text-align: center;
         }
+        
         .hero h2 {
-            margin-top: 0;
-            font-size: 3em; /* Increased size */
+            font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.4em;
-        }
-        .hero p {
-            font-size: 1.2em; /* Increased size */
             max-width: 800px;
+            margin: 0 auto 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
             margin: 0 auto;
             font-weight: 300;
-            opacity: 0.95;
+            opacity: 0.9;
         }
+        
+        .section {
+            padding: 5rem 5%;
+        }
+        
+        .section.alt {
+            background-color: var(--section-background);
+        }
+        
         .container {
-            width: 90%;
-            max-width: 1150px;
-            margin: 3.5em auto;
-            padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
+        
         .section-title {
             text-align: center;
-            font-size: 2.4em; /* Increased size */
+            font-size: 2rem;
             color: var(--text-dark);
-            margin-bottom: 2em;
+            margin-bottom: 3rem;
             font-weight: 600;
+        }
+        
+        .section-title span {
+            display: inline-block;
             position: relative;
         }
-        .section-title::after {
+        
+        .section-title span::after {
             content: '';
-            display: block;
-            width: 70px;
-            height: 4px;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
             background-color: var(--primary-color);
-            margin: 0.4em auto 0;
             border-radius: 2px;
         }
-        .products-grid {
+        
+        .platforms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Slightly larger min card width */
-            gap: 3em;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
-        .product-card {
+        
+        .extension-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .card {
             background-color: var(--card-background);
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06); /* More subtle, spread out shadow */
-            padding: 2.5em;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
             display: flex;
             flex-direction: column;
-            border: 1px solid #e8e8e8; /* Faint border */
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
         }
-        .product-card h3 {
-            margin-top: 0;
+        
+        .card h3 {
             color: var(--primary-color);
-            font-size: 1.7em;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 0.8em;
+            margin-bottom: 1rem;
         }
-        .product-card h3 a {
+        
+        .card h3 a {
             color: inherit;
             text-decoration: none;
         }
-        .product-card h3 a:hover {
+        
+        .card h3 a:hover {
             text-decoration: underline;
         }
-        .product-card p.description {
-            font-size: 1em;
+        
+        .card p.description {
             color: var(--text-light);
-            margin-bottom: 1.5em;
+            margin-bottom: 1.5rem;
             flex-grow: 1;
+            font-size: 0.95rem;
         }
-        .product-card .features {
+        
+        .card .features {
             list-style-type: none;
-            padding-left: 0;
-            font-size: 0.95em;
-            color: var(--text-dark);
         }
-        .product-card .features li {
-            padding-left: 2em; 
+        
+        .card .features li {
+            padding-left: 1.8rem;
             position: relative;
-            margin-bottom: 0.9em;
-            display: flex;
-            align-items: center;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            font-size: 0.9rem;
         }
-        .product-card .features li::before { 
-            font-family: inherit; /* Use Poppins for consistency if possible, or system UI as fallback */
-            color: var(--primary-color);
+        
+        .card .features li::before {
             position: absolute;
             left: 0;
-            font-weight: 700; /* Bold checkmark/icon */
-            font-size: 1.2em;
-            line-height: 1;
+            color: var(--primary-color);
+            font-weight: 700;
         }
-        /* Unicode icons - can be replaced with SVGs or an icon font for more polish */
-        .product-card:nth-child(1) .features li:nth-child(1)::before { content: '\2728'; } /* Sparkle */
-        .product-card:nth-child(1) .features li:nth-child(2)::before { content: '\1F4DD'; } /* Memo/Print */
-        .product-card:nth-child(1) .features li:nth-child(3)::before { content: '\1F50E'; } /* Magnifying glass right */
-        .product-card:nth-child(1) .features li:nth-child(4)::before { content: '\1F4B8'; } /* Money with wings */
+        
+        /* Platform icons */
+        .platforms-grid .card:nth-child(1) .features li:nth-child(1)::before { content: '✨'; }
+        .platforms-grid .card:nth-child(1) .features li:nth-child(2)::before { content: '🖼️'; }
+        .platforms-grid .card:nth-child(1) .features li:nth-child(3)::before { content: '📝'; }
+        .platforms-grid .card:nth-child(1) .features li:nth-child(4)::before { content: '🎁'; }
 
-        .product-card:nth-child(2) .features li:nth-child(1)::before { content: '\1F310'; } /* Globe */
-        .product-card:nth-child(2) .features li:nth-child(2)::before { content: '\1F9E0'; } /* Brain */
-        .product-card:nth-child(2) .features li:nth-child(3)::before { content: '\1F4E7'; } /* Email */
-        .product-card:nth-child(2) .features li:nth-child(4)::before { content: '\2699\FE0F'; } /* Gear */
+        .platforms-grid .card:nth-child(2) .features li:nth-child(1)::before { content: '🔍'; }
+        .platforms-grid .card:nth-child(2) .features li:nth-child(2)::before { content: '🧠'; }
+        .platforms-grid .card:nth-child(2) .features li:nth-child(3)::before { content: '📊'; }
+        .platforms-grid .card:nth-child(2) .features li:nth-child(4)::before { content: '⚙️'; }
 
+        /* Extension icons */
+        .extension-container .card .features li:nth-child(1)::before { content: '💵'; }
+        .extension-container .card .features li:nth-child(2)::before { content: '📈'; }
+        .extension-container .card .features li:nth-child(3)::before { content: '🧾'; }
+        .extension-container .card .features li:nth-child(4)::before { content: '📨'; }
+        
         footer {
             text-align: center;
-            padding: 3em 1.5em;
-            margin-top: 4em;
+            padding: 3rem 1.5rem;
             background-color: var(--footer-background);
-            color: #bdc3c7; /* Lighter grey for footer text */
+            color: #a0aec0;
         }
+        
         footer p {
-            margin: 0.5em 0;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
         }
+        
         footer .mission {
-            font-size: 1.05em;
-            color: #ecf0f1; /* Even lighter for mission */
-            margin-bottom: 1em;
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -179,39 +221,59 @@
     </nav>
 
     <section class="hero">
-        <h2>IPEK AI: Intelligent Solutions, Real Impact.</h2>
-        <p>IPEK AI develops advanced artificial intelligence platforms that deliver practical benefits and drive innovation.</p>
+        <h2>Intelligent Solutions, Real Impact</h2>
+        <p>We develop advanced artificial intelligence platforms that deliver practical benefits and drive innovation.</p>
     </section>
 
-    <div class="container">
-        <h2 class="section-title">Our Flagship Platforms</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <h3><a href="https://www.storyincolor.com" target="_blank">StoryInColor.com</a></h3>
-                <p class="description">Transform your photos into custom printable coloring pages. Our AI makes it easy to create unique artwork from your favorite memories.</p>
-                <ul class="features">
-                    <li>Intuitive AI photo-to-coloring conversion</li>
-                    <li>High-quality coloring pages from your photos</li>
-                    <li>Seamless Upload, Customize & Download</li>
-                    <li>Unlock creativity with complimentary starter credits</li>
-                </ul>
-            </div>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title"><span>AI Platforms</span></h2>
+            <div class="platforms-grid">
+                <div class="card">
+                    <h3><a href="https://www.storyincolor.com" target="_blank">StoryInColor</a></h3>
+                    <p class="description">Transform your photos into custom printable coloring pages. Our AI makes it easy to create unique artwork from your favorite memories.</p>
+                    <ul class="features">
+                        <li>AI photo-to-coloring conversion</li>
+                        <li>High-quality pages from your photos</li>
+                        <li>Simple upload and download workflow</li>
+                        <li>Free starter credits available</li>
+                    </ul>
+                </div>
 
-            <div class="product-card">
-                <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor.fyi</a></h3>
-                <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
-                <ul class="features">
-                    <li>Comprehensive monitoring for any website</li>
-                    <li>Advanced AI for nuanced content analysis</li>
-                    <li>Actionable alerts: price shifts, new content & more</li>
-                    <li>Highly configurable for tailored intelligence</li>
-                </ul>
+                <div class="card">
+                    <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor</a></h3>
+                    <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
+                    <ul class="features">
+                        <li>Monitor any website for changes</li>
+                        <li>AI-powered content analysis</li>
+                        <li>Actionable alerts for prices and content</li>
+                        <li>Customizable monitoring rules</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="section alt">
+        <div class="container">
+            <h2 class="section-title"><span>Chrome Extensions</span></h2>
+            <div class="extension-container">
+                <div class="card">
+                    <h3><a href="https://www.inboxtransactionviewer.com" target="_blank">Inbox Transaction Viewer</a></h3>
+                    <p class="description">View Stripe customer data directly in Gmail. See subscription details, transaction history, and customer value without leaving your inbox.</p>
+                    <ul class="features">
+                        <li>View MRR and total customer spend</li>
+                        <li>Track active subscriptions and purchases</li>
+                        <li>Review invoices within your inbox</li>
+                        <li>Easily identify paying customers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p class="mission">IPEK AI: Building effective AI solutions for today's challenges.</p>
+        <p class="mission">Building effective solutions for today's challenges</p>
         <p>&copy; 2024 IPEK AI. All rights reserved.</p>
     </footer>
 </body>
