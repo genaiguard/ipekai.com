@@ -133,11 +133,6 @@
             gap: 2.5rem;
         }
         
-        .extension-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
         .card {
             background-color: var(--card-background);
             border-radius: 8px;
@@ -208,10 +203,15 @@
         .platforms-grid .card:nth-child(2) .features li:nth-child(4)::before { content: '⚙️'; }
 
         /* Extension icons */
-        .extension-container .card .features li:nth-child(1)::before { content: '💵'; }
-        .extension-container .card .features li:nth-child(2)::before { content: '📈'; }
-        .extension-container .card .features li:nth-child(3)::before { content: '🧾'; }
-        .extension-container .card .features li:nth-child(4)::before { content: '📨'; }
+        .platforms-grid .card:nth-child(3) .features li:nth-child(1)::before { content: '💵'; }
+        .platforms-grid .card:nth-child(3) .features li:nth-child(2)::before { content: '📈'; }
+        .platforms-grid .card:nth-child(3) .features li:nth-child(3)::before { content: '🧾'; }
+        .platforms-grid .card:nth-child(3) .features li:nth-child(4)::before { content: '📨'; }
+
+        .platforms-grid .card:nth-child(4) .features li:nth-child(1)::before { content: '🔍'; }
+        .platforms-grid .card:nth-child(4) .features li:nth-child(2)::before { content: '🔗'; }
+        .platforms-grid .card:nth-child(4) .features li:nth-child(3)::before { content: '📋'; }
+        .platforms-grid .card:nth-child(4) .features li:nth-child(4)::before { content: '🔒'; }
         
         footer {
             text-align: center;
@@ -292,7 +292,7 @@
     <section id="chrome-extensions" class="section">
         <div class="container">
             <h2 class="section-title"><span>Chrome Extensions</span></h2>
-            <div class="extension-container">
+            <div class="platforms-grid">
                 <div class="card">
                     <h3><a href="https://www.inboxtransactionviewer.com" target="_blank">Inbox Transaction Viewer</a></h3>
                     <p class="description">View Stripe customer data directly in Gmail. See subscription details, transaction history, and customer value without leaving your inbox.</p>
