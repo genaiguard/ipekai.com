@@ -24,301 +24,312 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4361ee; /* More refined blue */
-            --secondary-color: #3f37c9; /* Complementary dark blue */
-            --text-dark: #2d3748; /* Rich dark text */
-            --text-light: #718096; /* Medium gray for secondary text */
-            --background-main: #f8fafc; /* Very light background */
-            --card-background: #ffffff;
-            --section-background: #f1f5f9; /* Light gray for alternate sections */
-            --footer-background: #2d3748; /* Darker footer */
-            --border-color: #e2e8f0; /* Light border color */
+            --background: 0 0% 100%;
+            --foreground: 0 0% 0%;
+            --card: 0 0% 100%;
+            --card-foreground: 0 0% 0%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 0 0% 0%;
+            --primary: 0 0% 0%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 0 0% 95%;
+            --secondary-foreground: 0 0% 0%;
+            --muted: 0 0% 95%;
+            --muted-foreground: 0 0% 45%;
+            --accent: 45 100% 50%;
+            --accent-foreground: 0 0% 0%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 0 0% 95%;
+            --input: 0 0% 95%;
+            --ring: 45 100% 50%;
+            --radius: 1rem;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
+
+        *, :after, :before {
             box-sizing: border-box;
+            border: 0 solid #e5e7eb;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--background-main);
-            color: var(--text-dark);
-            line-height: 1.7;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
+        .grid-pattern-large {
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .grid-pattern-large:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
         
+        .grid-pattern-large > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .navbar {
-            background-color: var(--card-background);
-            padding: 1.2rem 5%;
-            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        
+
         .navbar h1 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: hsl(var(--primary));
         }
-        
+
         .hero {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
             text-align: center;
         }
-        
+
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 700;
             max-width: 800px;
             margin: 0 auto 1rem;
             line-height: 1.2;
         }
-        
+
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto;
-            font-weight: 300;
-            opacity: 0.9;
+            color: #6c757d;
         }
-        
+
         .section {
             padding: 5rem 5%;
-        }
-        
-        .section.alt {
-            background-color: var(--section-background);
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            color: var(--text-dark);
-            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
             font-weight: 600;
         }
-        
-        .section-title span {
-            display: inline-block;
-            position: relative;
-        }
-        
-        .section-title span::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-        
+
         .platforms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
         }
-        
+
         .card {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
+            background-color: #f2f2f2;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
             display: flex;
             flex-direction: column;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
         }
-        
+
         .card h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
-        
+
         .card h3 a {
             color: inherit;
             text-decoration: none;
         }
-        
-        .card h3 a:hover {
-            text-decoration: underline;
-        }
-        
+
         .card p.description {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
             flex-grow: 1;
-            font-size: 0.95rem;
         }
-        
+
         .card .features {
             list-style-type: none;
         }
-        
+
         .card .features li {
-            padding-left: 1.8rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
             position: relative;
-            margin-bottom: 0.8rem;
-            color: var(--text-dark);
-            font-size: 0.9rem;
         }
-        
+
         .card .features li::before {
+            content: '✓';
             position: absolute;
             left: 0;
-            color: var(--primary-color);
+            color: #007bff;
             font-weight: 700;
         }
-        
-        /* Platform icons */
-        .platforms-grid .card:nth-child(1) .features li:nth-child(1)::before { content: '✨'; }
-        .platforms-grid .card:nth-child(1) .features li:nth-child(2)::before { content: '🖼️'; }
-        .platforms-grid .card:nth-child(1) .features li:nth-child(3)::before { content: '📝'; }
-        .platforms-grid .card:nth-child(1) .features li:nth-child(4)::before { content: '🎁'; }
 
-        .platforms-grid .card:nth-child(2) .features li:nth-child(1)::before { content: '🔍'; }
-        .platforms-grid .card:nth-child(2) .features li:nth-child(2)::before { content: '🧠'; }
-        .platforms-grid .card:nth-child(2) .features li:nth-child(3)::before { content: '📊'; }
-        .platforms-grid .card:nth-child(2) .features li:nth-child(4)::before { content: '⚙️'; }
+        .card .learn-more {
+            margin-top: auto;
+            padding-top: 1rem;
+            font-weight: 600;
+            text-align: right;
+        }
 
-        /* Extension icons */
-        .platforms-grid .card:nth-child(3) .features li:nth-child(1)::before { content: '💵'; }
-        .platforms-grid .card:nth-child(3) .features li:nth-child(2)::before { content: '📈'; }
-        .platforms-grid .card:nth-child(3) .features li:nth-child(3)::before { content: '🧾'; }
-        .platforms-grid .card:nth-child(3) .features li:nth-child(4)::before { content: '📨'; }
+        .card .learn-more a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-        .platforms-grid .card:nth-child(4) .features li:nth-child(1)::before { content: '🔍'; }
-        .platforms-grid .card:nth-child(4) .features li:nth-child(2)::before { content: '🔗'; }
-        .platforms-grid .card:nth-child(4) .features li:nth-child(3)::before { content: '📋'; }
-        .platforms-grid .card:nth-child(4) .features li:nth-child(4)::before { content: '🔒'; }
-        
+        .card .learn-more a:hover {
+            color: #0056b3;
+        }
+
+        .card .icon {
+            display: inline-block;
+            width: 1.5rem;
+            text-align: center;
+            margin-right: 0.5rem;
+        }
+
         footer {
             text-align: center;
-            padding: 3rem 1.5rem;
-            background-color: var(--footer-background);
-            color: #a0aec0;
+            padding: 4rem 1.5rem;
+            background-color: #f2f2f2;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 6rem;
         }
-        
+
         footer p {
             margin: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-        
-        footer .mission {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1rem;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <h1>IPEK AI</h1>
-    </nav>
+    <div class="grid-pattern-large">
+        <nav class="navbar">
+            <h1>IPEK AI</h1>
+        </nav>
 
-    <section class="hero">
-        <h2>Intelligent Solutions, Real Impact</h2>
-        <p>We develop advanced artificial intelligence platforms that deliver practical benefits.</p>
-    </section>
+        <section class="hero">
+            <h2>Intelligent Solutions, Real Impact</h2>
+        </section>
+    </div>
 
-    <section id="ai-platforms" class="section">
-        <div class="container">
-            <h2 class="section-title"><span>AI Platforms</span></h2>
-            <div class="platforms-grid">
-                <div class="card">
-                    <h3><a href="https://www.storyincolor.com" target="_blank">StoryInColor</a></h3>
-                    <p class="description">Transform your photos into custom printable coloring pages. Our AI makes it easy to create unique artwork from your favorite memories.</p>
-                    <ul class="features">
-                        <li>AI photo-to-coloring conversion</li>
-                        <li>High-quality pages from your photos</li>
-                        <li>Simple upload and download workflow</li>
-                        <li>Free starter credits available</li>
-                    </ul>
-                </div>
+    <main>
+        <section id="ai-platforms" class="section">
+            <div class="container">
+                <h2 class="section-title">AI Platforms</h2>
+                <div class="platforms-grid">
+                    <div class="card">
+                        <h3><a href="https://www.storyincolor.com" target="_blank">StoryInColor</a></h3>
+                        <p class="description">Transform your photos into custom printable coloring pages. Our AI makes it easy to create unique artwork from your favorite memories.</p>
+                        <ul class="features">
+                            <li><span class="icon">✨</span>AI photo-to-coloring conversion</li>
+                            <li><span class="icon">🖼️</span>High-quality pages from your photos</li>
+                            <li><span class="icon">📝</span>Simple upload and download workflow</li>
+                            <li><span class="icon">🎁</span>Free starter credits available</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="https://www.storyincolor.com" target="_blank">Learn more &rarr;</a>
+                        </div>
+                    </div>
 
-                <div class="card">
-                    <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor</a></h3>
-                    <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
-                    <ul class="features">
-                        <li>Monitor any website for changes</li>
-                        <li>AI-powered content analysis</li>
-                        <li>Actionable alerts for prices and content</li>
-                        <li>Customizable monitoring rules</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="iot-platform" class="section alt">
-        <div class="container">
-            <h2 class="section-title"><span>IoT Platform</span></h2>
-            <div class="platforms-grid">
-                <div class="card">
-                    <h3><a href="https://www.taglogger.com" target="_blank">TagLogger</a></h3>
-                    <p class="description">Unlock the location history and more of your Apple AirTags. An independent service, not affiliated with Apple Inc.</p>
-                    <ul class="features">
-                        <li>Complete Location History</li>
-                        <li>Geofencing and Alerts</li>
-                        <li>Inventory Check-In/Out</li>
-                        <li>Android, iOS, and Web support</li>
-                    </ul>
+                    <div class="card">
+                        <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor</a></h3>
+                        <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
+                        <ul class="features">
+                            <li><span class="icon">🔍</span>Monitor any website for changes</li>
+                            <li><span class="icon">🧠</span>AI-powered content analysis</li>
+                            <li><span class="icon">📊</span>Actionable alerts for prices and content</li>
+                            <li><span class="icon">⚙️</span>Customizable monitoring rules</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="https://www.webmonitor.fyi" target="_blank">Learn more &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="chrome-extensions" class="section">
-        <div class="container">
-            <h2 class="section-title"><span>Chrome Extensions</span></h2>
-            <div class="platforms-grid">
-                <div class="card">
-                    <h3><a href="https://www.inboxtransactionviewer.com" target="_blank">Inbox Transaction Viewer</a></h3>
-                    <p class="description">View Stripe customer data directly in Gmail. See subscription details, transaction history, and customer value without leaving your inbox.</p>
-                    <ul class="features">
-                        <li>View MRR and total customer spend</li>
-                        <li>Track active subscriptions and purchases</li>
-                        <li>Review invoices within your inbox</li>
-                        <li>Easily identify paying customers</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3><a href="affiliate-link-detector.html">Affiliate Link Detector</a></h3>
-                    <p class="description">Spot affiliate links instantly with Affiliate Link Detector! Uncover hidden affiliate and shortened URLs to browse smarter and stay informed.</p>
-                    <ul class="features">
-                        <li>Instant Affiliate Link Detection</li>
-                        <li>Shortened URL Resolver</li>
-                        <li>User-Friendly Popup</li>
-                        <li>Lightweight & Private</li>
-                    </ul>
+        <section id="iot-platform" class="section">
+            <div class="container">
+                <h2 class="section-title">IoT Platform</h2>
+                <div class="platforms-grid">
+                    <div class="card">
+                        <h3><a href="https://www.taglogger.com" target="_blank">TagLogger</a></h3>
+                        <p class="description">Unlock the location history and more of your Apple AirTags. An independent service, not affiliated with Apple Inc.</p>
+                        <ul class="features">
+                            <li><span class="icon">📍</span>Complete Location History</li>
+                            <li><span class="icon">🔔</span>Geofencing and Alerts</li>
+                            <li><span class="icon">📦</span>Inventory Check-In/Out</li>
+                            <li><span class="icon">📱</span>Android, iOS, and Web support</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="https://www.taglogger.com" target="_blank">Learn more &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="chrome-extensions" class="section">
+            <div class="container">
+                <h2 class="section-title">Chrome Extensions</h2>
+                <div class="platforms-grid">
+                    <div class="card">
+                        <h3><a href="https://www.inboxtransactionviewer.com" target="_blank">Inbox Transaction Viewer</a></h3>
+                        <p class="description">View Stripe customer data directly in Gmail. See subscription details, transaction history, and customer value without leaving your inbox.</p>
+                        <ul class="features">
+                            <li><span class="icon">📧</span>View MRR and total customer spend</li>
+                            <li><span class="icon">🔄</span>Track active subscriptions and purchases</li>
+                            <li><span class="icon">📄</span>Review invoices within your inbox</li>
+                            <li><span class="icon">👤</span>Easily identify paying customers</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="https://www.inboxtransactionviewer.com" target="_blank">Learn more &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3><a href="affiliate-link-detector.html">Affiliate Link Detector</a></h3>
+                        <p class="description">Spot affiliate links instantly with Affiliate Link Detector! Uncover hidden affiliate and shortened URLs to browse smarter and stay informed.</p>
+                        <ul class="features">
+                            <li><span class="icon">🕵️</span>Instant Affiliate Link Detection</li>
+                            <li><span class="icon">🔗</span>Shortened URL Resolver</li>
+                            <li><span class="icon">💡</span>User-Friendly Popup</li>
+                            <li><span class="icon">🛡️</span>Lightweight & Private</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="affiliate-link-detector.html">Learn more &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p class="mission">Building effective solutions for today's challenges</p>
         <p>&copy; 2024 IPEK AI. All rights reserved.</p>
     </footer>
 </body>

@@ -7,92 +7,211 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4361ee;
-            --text-dark: #2d3748;
-            --text-light: #718096;
-            --background-main: #f8fafc;
-            --card-background: #ffffff;
-            --border-color: #e2e8f0;
+            --background: 0 0% 100%;
+            --foreground: 0 0% 0%;
+            --card: 0 0% 100%;
+            --card-foreground: 0 0% 0%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 0 0% 0%;
+            --primary: 0 0% 0%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 0 0% 95%;
+            --secondary-foreground: 0 0% 0%;
+            --muted: 0 0% 95%;
+            --muted-foreground: 0 0% 45%;
+            --accent: 45 100% 50%;
+            --accent-foreground: 0 0% 0%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 0 0% 95%;
+            --input: 0 0% 95%;
+            --ring: 45 100% 50%;
+            --radius: 1rem;
         }
+
+        *, :after, :before {
+            box-sizing: border-box;
+            border: 0 solid #e5e7eb;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--background-main);
-            color: var(--text-dark);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
+        .grid-pattern-large {
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .grid-pattern-large:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .grid-pattern-large > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .navbar {
-            background-color: var(--card-background);
-            padding: 1.2rem 5%;
-            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 5%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
+
         .navbar h1 a {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: hsl(var(--primary));
             text-decoration: none;
         }
+
+        .hero {
+            padding: 6rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #6c757d;
+        }
+
+        .section {
+            padding: 5rem 5%;
+        }
+        
         .container {
             max-width: 800px;
-            margin: 4rem auto;
-            padding: 2rem;
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin: 0 auto;
         }
-        h2 {
-            color: var(--primary-color);
+
+        .card {
+            background-color: #f2f2f2;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card h2 {
             font-size: 2rem;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
-        p {
-            color: var(--text-light);
+
+        .card p {
+            color: #6c757d;
             margin-bottom: 1.5rem;
         }
-        .features li {
-            margin-bottom: 1rem;
+
+        .card .features {
+            list-style-type: none;
+            padding: 0;
         }
+
+        .card .features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .card .features li .icon {
+            display: inline-block;
+            width: 1.5rem;
+            text-align: center;
+            margin-right: 0.5rem;
+        }
+
         .cta-button {
             display: inline-block;
-            background-color: var(--primary-color);
+            background-color: #007bff;
             color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: background-color 0.3s ease;
         }
+
         .cta-button:hover {
-            background-color: #3f37c9;
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 1.5rem;
+            background-color: #f2f2f2;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 6rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <h1><a href="/">IPEK AI</a></h1>
-    </nav>
-    <div class="container">
-        <h2>Affiliate Link Detector</h2>
-        <p>Spot affiliate links instantly with Affiliate Link Detector! Uncover hidden affiliate and shortened URLs to browse smarter and stay informed.</p>
-        <p>Affiliate Link Detector helps you take control of your browsing by revealing affiliate links and resolving shortened URLs (like bit.ly) in real time.</p>
-        <h3>Key features:</h3>
-        <ul class="features">
-            <li><strong>Instant Affiliate Link Detection:</strong> Identifies affiliate links (e.g., Amazon, ShareASale) with a scoring system to show their likelihood.</li>
-            <li><strong>Shortened URL Resolver:</strong> Reveals the true destination of shortened links for safer browsing.</li>
-            <li><strong>User-Friendly Popup:</strong> View all detected links, their scores, and resolved URLs, with a handy copy button.</li>
-            <li><strong>Lightweight & Private:</strong> No data collection, fast performance, and works on all websites.</li>
-        </ul>
-        <a href="#" class="cta-button">Install Now</a>
+    <div class="grid-pattern-large">
+        <nav class="navbar">
+            <h1><a href="/">IPEK AI</a></h1>
+        </nav>
+
+        <section class="hero">
+            <h2>Affiliate Link Detector</h2>
+            <p>Spot affiliate links instantly and browse with confidence.</p>
+        </section>
     </div>
 
-    <div class="container" id="privacy-policy">
-        <h2>Privacy Policy</h2>
-        <p>We are committed to protecting your privacy. This Affiliate Link Detector extension is designed to be completely private and secure.</p>
-        <p><strong>No Data Collection:</strong> We do not collect, store, or transmit any of your personal data or browsing activity. All processing happens locally on your device.</p>
-    </div>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="card">
+                    <h2>Key Features</h2>
+                    <ul class="features">
+                        <li><span class="icon">🕵️</span>Instant Affiliate Link Detection</li>
+                        <li><span class="icon">🔗</span>Shortened URL Resolver</li>
+                        <li><span class="icon">💡</span>User-Friendly Popup</li>
+                        <li><span class="icon">🛡️</span>Lightweight & Private</li>
+                    </ul>
+                    <a href="#" class="cta-button">Install Now</a>
+                </div>
+
+                <div class="card" id="privacy-policy">
+                    <h2>Privacy Policy</h2>
+                    <p>We are committed to protecting your privacy. This Affiliate Link Detector extension is designed to be completely private and secure.</p>
+                    <p><strong>No Data Collection:</strong> We do not collect, store, or transmit any of your personal data or browsing activity. All processing happens locally on your device.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IPEK AI. All rights reserved.</p>
+    </footer>
 </body>
 </html>
