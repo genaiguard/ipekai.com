@@ -41,6 +41,8 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 2px, transparent 1px);
+            background-size: 40px 40px;
         }
 
         .grid-pattern-large {
@@ -57,8 +59,8 @@
             right: 0;
             bottom: 0;
             z-index: 0;
-            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
-            background-size: 20px 20px;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 2px, transparent 1px);
+            background-size: 40px 40px;
         }
         
         .grid-pattern-large > * {
@@ -76,7 +78,8 @@
         .navbar h1 a {
             font-size: 1.75rem;
             font-weight: 700;
-            color: hsl(var(--primary));
+            color: hsl(var(--muted-foreground));
+            opacity: 0.6;
             text-decoration: none;
         }
 
@@ -133,16 +136,17 @@
         }
 
         .card .features li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
+            background-color: #e9ecef;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: #495057;
+            transition: background-color 0.3s ease;
         }
 
-        .card .features li .icon {
-            display: inline-block;
-            width: 1.5rem;
-            text-align: center;
-            margin-right: 0.5rem;
+        .card .features li:hover {
+            background-color: #dee2e6;
         }
 
         .cta-button {
@@ -193,10 +197,10 @@
                 <div class="card">
                     <h2>Key Features</h2>
                     <ul class="features">
-                        <li><span class="icon">🕵️</span>Instant Affiliate Link Detection</li>
-                        <li><span class="icon">🔗</span>Shortened URL Resolver</li>
-                        <li><span class="icon">💡</span>User-Friendly Popup</li>
-                        <li><span class="icon">🛡️</span>Lightweight & Private</li>
+                        <li>Instant Affiliate Link Detection</li>
+                        <li>Shortened URL Resolver</li>
+                        <li>User-Friendly Popup</li>
+                        <li>Lightweight & Private</li>
                     </ul>
                     <a href="https://chromewebstore.google.com/detail/affiliate-link-detector/gfppjbcnaioijahbkmdhbhbmhjalkoac" target="_blank" class="cta-button">Install Now</a>
                 </div>

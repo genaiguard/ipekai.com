@@ -58,25 +58,16 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 2px, transparent 1px);
+            background-size: 40px 40px;
         }
 
         .grid-pattern-large {
             position: relative;
             overflow: hidden;
-            background-color: white;
         }
 
-        .grid-pattern-large:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-            background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
+        
         
         .grid-pattern-large > * {
             position: relative;
@@ -93,7 +84,8 @@
         .navbar h1 {
             font-size: 1.75rem;
             font-weight: 700;
-            color: hsl(var(--primary));
+            color: hsl(var(--muted-foreground));
+            opacity: 0.6;
         }
 
         .hero {
@@ -171,20 +163,21 @@
 
         .card .features {
             list-style-type: none;
+            padding: 0;
         }
 
         .card .features li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
+            background-color: #e9ecef;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: #495057;
+            transition: background-color 0.3s ease;
         }
 
-        .card .features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #007bff;
-            font-weight: 700;
+        .card .features li:hover {
+            background-color: #dee2e6;
         }
 
         .card .learn-more {
@@ -202,13 +195,6 @@
 
         .card .learn-more a:hover {
             color: #0056b3;
-        }
-
-        .card .icon {
-            display: inline-block;
-            width: 1.5rem;
-            text-align: center;
-            margin-right: 0.5rem;
         }
 
         footer {
@@ -232,9 +218,7 @@
             <h1>IPEK AI</h1>
         </nav>
 
-        <section class="hero">
-            <h2>Intelligent Solutions, Real Impact</h2>
-        </section>
+        
     </div>
 
     <main>
@@ -246,10 +230,10 @@
                         <h3><a href="https://www.storyincolor.com" target="_blank">StoryInColor</a></h3>
                         <p class="description">Transform your photos into custom printable coloring pages. Our AI makes it easy to create unique artwork from your favorite memories.</p>
                         <ul class="features">
-                            <li><span class="icon">✨</span>AI photo-to-coloring conversion</li>
-                            <li><span class="icon">🖼️</span>High-quality pages from your photos</li>
-                            <li><span class="icon">📝</span>Simple upload and download workflow</li>
-                            <li><span class="icon">🎁</span>Free starter credits available</li>
+                            <li>AI photo-to-coloring conversion</li>
+                            <li>High-quality pages from your photos</li>
+                            <li>Simple upload and download workflow</li>
+                            <li>Free starter credits available</li>
                         </ul>
                         <div class="learn-more">
                             <a href="https://www.storyincolor.com" target="_blank">Learn more &rarr;</a>
@@ -260,10 +244,10 @@
                         <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor</a></h3>
                         <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
                         <ul class="features">
-                            <li><span class="icon">🔍</span>Monitor any website for changes</li>
-                            <li><span class="icon">🧠</span>AI-powered content analysis</li>
-                            <li><span class="icon">📊</span>Actionable alerts for prices and content</li>
-                            <li><span class="icon">⚙️</span>Customizable monitoring rules</li>
+                            <li>Monitor any website for changes</li>
+                            <li>AI-powered content analysis</li>
+                            <li>Actionable alerts for prices and content</li>
+                            <li>Customizable monitoring rules</li>
                         </ul>
                         <div class="learn-more">
                             <a href="https://www.webmonitor.fyi" target="_blank">Learn more &rarr;</a>
@@ -281,10 +265,10 @@
                         <h3><a href="https://www.taglogger.com" target="_blank">TagLogger</a></h3>
                         <p class="description">Unlock the location history and more of your Apple AirTags. An independent service, not affiliated with Apple Inc.</p>
                         <ul class="features">
-                            <li><span class="icon">📍</span>Complete Location History</li>
-                            <li><span class="icon">🔔</span>Geofencing and Alerts</li>
-                            <li><span class="icon">📦</span>Inventory Check-In/Out</li>
-                            <li><span class="icon">📱</span>Android, iOS, and Web support</li>
+                            <li>Complete Location History</li>
+                            <li>Geofencing and Alerts</li>
+                            <li>Inventory Check-In/Out</li>
+                            <li>Android, iOS, and Web support</li>
                         </ul>
                         <div class="learn-more">
                             <a href="https://www.taglogger.com" target="_blank">Learn more &rarr;</a>
@@ -302,10 +286,10 @@
                         <h3><a href="https://www.inboxtransactionviewer.com" target="_blank">Inbox Transaction Viewer</a></h3>
                         <p class="description">View Stripe customer data directly in Gmail. See subscription details, transaction history, and customer value without leaving your inbox.</p>
                         <ul class="features">
-                            <li><span class="icon">📧</span>View MRR and total customer spend</li>
-                            <li><span class="icon">🔄</span>Track active subscriptions and purchases</li>
-                            <li><span class="icon">📄</span>Review invoices within your inbox</li>
-                            <li><span class="icon">👤</span>Easily identify paying customers</li>
+                            <li>View MRR and total customer spend</li>
+                            <li>Track active subscriptions and purchases</li>
+                            <li>Review invoices within your inbox</li>
+                            <li>Easily identify paying customers</li>
                         </ul>
                         <div class="learn-more">
                             <a href="https://www.inboxtransactionviewer.com" target="_blank">Learn more &rarr;</a>
@@ -315,14 +299,26 @@
                         <h3><a href="affiliate-link-detector.html">Affiliate Link Detector</a></h3>
                         <p class="description">Spot affiliate links instantly with Affiliate Link Detector! Uncover hidden affiliate and shortened URLs to browse smarter and stay informed.</p>
                         <ul class="features">
-                            <li><span class="icon">🕵️</span>Instant Affiliate Link Detection</li>
-                            <li><span class="icon">🔗</span>Shortened URL Resolver</li>
-                            <li><span class="icon">💡</span>User-Friendly Popup</li>
-                            <li><span class="icon">🛡️</span>Lightweight & Private</li>
+                            <li>Instant Affiliate Link Detection</li>
+                            <li>Shortened URL Resolver</li>
+                            <li>User-Friendly Popup</li>
+                            <li>Lightweight & Private</li>
                         </ul>
                         <div class="learn-more">
                             <a href="affiliate-link-detector.html">Learn more &rarr;</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cybersecurity" class="section">
+            <div class="container">
+                <h2 class="section-title">Cybersecurity</h2>
+                <div class="platforms-grid">
+                    <div class="card">
+                        <h3>10+ Years of Experience</h3>
+                        <p class="description">Extensive experience in turning complex regulations into actionable engineering strategies. Proven track record in building and scaling compliance programs, leading cross-functional teams, and automating compliance checks to ensure robust security and data protection.</p>
                     </div>
                 </div>
             </div>
@@ -333,4 +329,4 @@
         <p>&copy; 2024 IPEK AI. All rights reserved.</p>
     </footer>
 </body>
-</html> 
+</html>
