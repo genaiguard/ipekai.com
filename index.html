@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPEK AI - AI Solution and Services</title>
-    <meta name="description" content="IPEK AI Ventures - A digital product studio specializing in AI platforms, IoT solutions, Chrome extensions, and mobile apps. Discover StoryInColor, WebMonitor, TagLogger, and more innovative products.">
-    <meta name="keywords" content="AI platforms, IoT platform, Chrome extensions, mobile apps, digital products, StoryInColor, WebMonitor, TagLogger, cybersecurity">
+    <meta name="description" content="IPEKAI Solutions - AI-powered products and digital solutions. TagLogger, WebMonitor, StoryInColor, Inbox Transaction Viewer, Affiliate Link Detector, and more.">
+    <meta name="keywords" content="digital products, AI solutions, TagLogger, WebMonitor, StoryInColor, Inbox Transaction Viewer, Affiliate Link Detector, cybersecurity">
     <meta name="author" content="IPEK AI">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ipekai.com/">
     <meta property="og:title" content="IPEK AI - AI Solution and Services">
-    <meta property="og:description" content="A digital product studio specializing in AI platforms, IoT solutions, Chrome extensions, and mobile apps.">
+    <meta property="og:description" content="IPEKAI Solutions - AI-powered products and digital solutions. TagLogger, WebMonitor, StoryInColor, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ipekai.com/">
     <meta property="og:site_name" content="IPEK AI">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="IPEK AI - AI Solution and Services">
-    <meta name="twitter:description" content="A digital product studio specializing in AI platforms, IoT solutions, Chrome extensions, and mobile apps.">
+    <meta name="twitter:description" content="IPEKAI Solutions - AI-powered products and digital solutions. TagLogger, WebMonitor, StoryInColor, and more.">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "IPEK AI Ventures",
+      "name": "IPEKAI Solutions",
       "url": "https://ipekai.com",
-      "description": "A digital product studio specializing in AI platforms, IoT solutions, Chrome extensions, and mobile apps",
+      "description": "AI-powered products and digital solutions. We build software with a background in cybersecurity and engineering-first compliance.",
       "foundingDate": "2024",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -33,11 +33,11 @@
         "itemListElement": [
           {
             "@type": "SoftwareApplication",
-            "name": "StoryInColor",
-            "description": "Transform photos into custom printable coloring pages using AI",
-            "url": "https://www.storyincolor.com",
-            "applicationCategory": "MultimediaApplication",
-            "operatingSystem": "Web"
+            "name": "TagLogger",
+            "description": "AirTag asset tracking for teams. Fleet operations, geofence alerts, worldwide Find My tracking, and location history export.",
+            "url": "https://www.taglogger.com",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "iOS, Android, Web"
           },
           {
             "@type": "SoftwareApplication",
@@ -49,11 +49,11 @@
           },
           {
             "@type": "SoftwareApplication",
-            "name": "TagLogger",
-            "description": "Location history and management for Apple AirTags",
-            "url": "https://www.taglogger.com",
-            "applicationCategory": "MobileApplication",
-            "operatingSystem": "iOS, Android, Web"
+            "name": "StoryInColor",
+            "description": "Transform photos into custom printable coloring pages using AI",
+            "url": "https://www.storyincolor.com",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Web"
           }
         ]
       }
@@ -182,36 +182,22 @@
             color: #6c757d;
         }
 
-        .site-intro {
-            max-width: 720px;
-            margin: 0 auto 2rem;
-            padding: 0 5%;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #374151;
-        }
-
         .section {
             padding: 1rem 5%;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 5%;
         }
 
         .platforms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 2.5rem;
+            max-width: 720px;
+            margin: 0 auto;
         }
 
         .card {
@@ -233,6 +219,20 @@
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             border-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .card-intro .card-heading {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-intro .description {
+            margin-bottom: 0;
         }
 
 
@@ -347,16 +347,7 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            object-position: center;
-        }
-
-        /* On mobile devices, show full width without cropping */
-        @media (max-width: 768px) {
-            .browser-window-img {
-                object-fit: contain;
-                height: auto;
-                max-height: 250px;
-            }
+            object-position: top;
         }
     </style>
 </head>
@@ -371,12 +362,72 @@
         
     </div>
 
-    <main role="main">
-        <p class="site-intro">We build AI-powered products and digital solutions. Our background includes 10+ years of experience in cybersecurity—turning complex regulations into engineering-first solutions and scaling compliance programs.</p>
-        <section id="ai-platforms" class="section" aria-labelledby="ai-platforms-title">
+    <main role="main" aria-label="Products and solutions">
+        <div class="section">
             <div class="container">
-                <h2 id="ai-platforms-title" class="section-title">Micro SaaS</h2>
                 <div class="platforms-grid">
+                    <!-- Intro card -->
+                    <div class="card card-intro">
+                        <h2 class="card-heading">IPEKAI Solutions</h2>
+                        <p class="description">We build AI-powered products and digital solutions. Our background includes 10+ years of experience in cybersecurity—turning complex regulations into engineering-first solutions and scaling compliance programs.</p>
+                    </div>
+
+                    <!-- TagLogger -->
+                    <div class="card">
+                        <div class="browser-window" style="margin-bottom: 1.5rem;">
+                            <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
+                                <div class="browser-dots" style="display: flex; gap: 0.25rem;">
+                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #28ca42;"></div>
+                                </div>
+                                <div class="browser-url" style="background: white; border-radius: 0.5rem; padding: 0.25rem 0.75rem; font-size: 0.75rem; color: #5f6368; flex-grow: 1; text-align: center; border: 1px solid #e1e5e9;">taglogger.com</div>
+                            </div>
+                            <img src="https://taglogger.com/og-image.webp" alt="TagLogger - AirTag asset tracking for teams, dashboard and hardware options" loading="lazy" class="browser-window-img" style="border-radius: 0 0 0.75rem 0.75rem; border: 1px solid #e1e5e9; border-top: none;">
+                        </div>
+                        <h3><a href="https://www.taglogger.com" target="_blank">TagLogger</a></h3>
+                        <p class="description">AirTag asset tracking for teams. Add the control and action layer for fleet operations at scale—live placement of tags across your region, geofence alerts, worldwide tracking via the Find My network, and export for proof of delivery, audits, and reporting.</p>
+                        <ul class="features">
+                            <li>Geofence alerts (push and email)</li>
+                            <li>Worldwide tracking via Find My network, no cellular fees</li>
+                            <li>Recent activity feed for entry/exit and movement</li>
+                            <li>Secure share links with optional expiry and revoke</li>
+                            <li>Download location history (CSV/JSON) for audits and reporting</li>
+                            <li>Android, iOS, and Web</li>
+                            <li>Built for construction, logistics, healthcare, manufacturing, equipment rental</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="https://www.taglogger.com" target="_blank">Learn more &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- WebMonitor -->
+                    <div class="card">
+                        <div class="browser-window" style="margin-bottom: 1.5rem;">
+                            <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
+                                <div class="browser-dots" style="display: flex; gap: 0.25rem;">
+                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #28ca42;"></div>
+                                </div>
+                                <div class="browser-url" style="background: white; border-radius: 0.5rem; padding: 0.25rem 0.75rem; font-size: 0.75rem; color: #5f6368; flex-grow: 1; text-align: center; border: 1px solid #e1e5e9;">webmonitor.fyi</div>
+                            </div>
+                            <img src="WebMonitor.webp" alt="WebMonitor - AI-powered website monitoring dashboard" loading="lazy" class="browser-window-img" style="border-radius: 0 0 0.75rem 0.75rem; border: 1px solid #e1e5e9; border-top: none;">
+                        </div>
+                        <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor</a></h3>
+                        <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
+                        <ul class="features">
+                            <li>Monitor any website for changes</li>
+                            <li>AI-powered content analysis</li>
+                            <li>Actionable alerts for prices and content</li>
+                            <li>Customizable monitoring rules</li>
+                        </ul>
+                        <div class="learn-more">
+                            <a href="https://www.webmonitor.fyi" target="_blank">Learn more &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- StoryInColor -->
                     <div class="card">
                         <div class="browser-window" style="margin-bottom: 1.5rem;">
                             <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
@@ -402,73 +453,8 @@
                         </div>
                     </div>
 
+                    <!-- Inbox Transaction Viewer -->
                     <div class="card">
-                        <div class="browser-window" style="margin-bottom: 1.5rem;">
-                            <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
-                                <div class="browser-dots" style="display: flex; gap: 0.25rem;">
-                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
-                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
-                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #28ca42;"></div>
-                                </div>
-                                <div class="browser-url" style="background: white; border-radius: 0.5rem; padding: 0.25rem 0.75rem; font-size: 0.75rem; color: #5f6368; flex-grow: 1; text-align: center; border: 1px solid #e1e5e9;">webmonitor.fyi</div>
-                            </div>
-                            <img src="WebMonitor.webp" alt="WebMonitor - AI-powered website monitoring dashboard" loading="lazy" class="browser-window-img" style="border-radius: 0 0 0.75rem 0.75rem; border: 1px solid #e1e5e9; border-top: none;">
-                        </div>
-                        <h3><a href="https://www.webmonitor.fyi" target="_blank">WebMonitor</a></h3>
-                        <p class="description">Stay informed with our AI-powered web monitoring service. Track website changes effectively and receive timely, relevant alerts.</p>
-                        <ul class="features">
-                            <li>Monitor any website for changes</li>
-                            <li>AI-powered content analysis</li>
-                            <li>Actionable alerts for prices and content</li>
-                            <li>Customizable monitoring rules</li>
-                        </ul>
-                        <div class="learn-more">
-                            <a href="https://www.webmonitor.fyi" target="_blank">Learn more &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="iot-platform" class="section" aria-labelledby="iot-platform-title">
-            <div class="container">
-                <h2 id="iot-platform-title" class="section-title">IoT Solutions</h2>
-                <div class="platforms-grid">
-                    <div class="card">
-                        <div class="browser-window" style="margin-bottom: 1.5rem;">
-                            <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
-                                <div class="browser-dots" style="display: flex; gap: 0.25rem;">
-                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
-                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
-                                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #28ca42;"></div>
-                                </div>
-                                <div class="browser-url" style="background: white; border-radius: 0.5rem; padding: 0.25rem 0.75rem; font-size: 0.75rem; color: #5f6368; flex-grow: 1; text-align: center; border: 1px solid #e1e5e9;">taglogger.com</div>
-                            </div>
-                            <img src="TagLogger.webp" alt="TagLogger - Apple AirTag location history and management interface" loading="lazy" class="browser-window-img" style="border-radius: 0 0 0.75rem 0.75rem; border: 1px solid #e1e5e9; border-top: none;">
-                        </div>
-                        <h3><a href="https://www.taglogger.com" target="_blank">TagLogger</a></h3>
-                        <p class="description">Unlock the location history and more of your Apple AirTags. An independent service, not affiliated with Apple Inc.</p>
-                        <ul class="features">
-                            <li>Complete Location History</li>
-                            <li>Geofencing and Alerts</li>
-                            <li>Inventory Check-In/Out</li>
-                            <li>Android, iOS, and Web support</li>
-                        </ul>
-                        <div class="learn-more">
-                            <a href="https://www.taglogger.com" target="_blank">Learn more &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="chrome-extensions" class="section" aria-labelledby="chrome-extensions-title">
-            <div class="container">
-                <h2 id="chrome-extensions-title" class="section-title">Chrome Extensions</h2>
-                <div class="platforms-grid">
-                    <div class="card">
-
-                        
                         <div class="browser-window" style="margin-bottom: 1.5rem;">
                             <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
                                 <div class="browser-dots" style="display: flex; gap: 0.25rem;">
@@ -492,6 +478,8 @@
                             <a href="https://www.inboxtransactionviewer.com" target="_blank">Learn more &rarr;</a>
                         </div>
                     </div>
+
+                    <!-- Affiliate Link Detector -->
                     <div class="card">
                         <div class="browser-window" style="margin-bottom: 1.5rem;">
                             <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
@@ -516,14 +504,8 @@
                             <a href="affiliate-link-detector.html">Learn more &rarr;</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="mobile-app" class="section" aria-labelledby="mobile-app-title">
-            <div class="container">
-                <h2 id="mobile-app-title" class="section-title">Mobile App</h2>
-                <div class="platforms-grid">
+                    <!-- Drone Range Extender -->
                     <div class="card" style="opacity: 0.6; filter: grayscale(0.3);">
                         <div class="browser-window" style="margin-bottom: 1.5rem;">
                             <div class="browser-header" style="background: #f1f3f4; border-radius: 0.75rem 0.75rem 0 0; padding: 0.75rem; display: flex; align-items: center; gap: 0.5rem; border: 1px solid #e1e5e9; border-bottom: none;">
@@ -550,8 +532,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
     </main>
 
     <footer>
