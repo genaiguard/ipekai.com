@@ -1,0 +1,126 @@
+1:"$Sreact.fragment"
+2:I[3507,["177","static/chunks/app/layout-a2f8648fe1aba064.js"],""]
+4:I[747,[],""]
+5:I[2023,[],""]
+6:I[8226,["226","static/chunks/226-55c731de000582e7.js","877","static/chunks/app/privacy/page-d898128da0723f5c.js"],""]
+7:I[2249,[],"OutletBoundary"]
+a:I[2249,[],"ViewportBoundary"]
+c:I[2249,[],"MetadataBoundary"]
+e:I[9614,[],""]
+:HL["/inbox-transaction-viewer/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/inbox-transaction-viewer/_next/static/css/424b1697a7e88cb5.css","style"]
+3:T11be,
+            (function() {
+              // Add preconnect for Google Fonts
+              var link = document.createElement('link');
+              link.rel = 'preconnect';
+              link.href = 'https://fonts.googleapis.com';
+              document.head.appendChild(link);
+              
+              var link2 = document.createElement('link');
+              link2.rel = 'preconnect';
+              link2.href = 'https://fonts.gstatic.com';
+              link2.crossOrigin = 'anonymous';
+              document.head.appendChild(link2);
+              
+              // Add critical CSS inline
+              var style = document.createElement('style');
+              style.innerHTML = `
+                body {
+                  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  margin: 0;
+                  padding: 0;
+                  color: #111;
+                  background-color: #fff;
+                  font-size: 1.05rem;
+                  line-height: 1.6;
+                }
+                
+                .transparent-container {
+                  background-color: rgba(255, 255, 255, 0.8);
+                  backdrop-filter: blur(10px);
+                  -webkit-backdrop-filter: blur(10px);
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                }
+                
+                .transparent-image {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                }
+                
+                [class*="rounded-xl"], [class*="rounded-lg"] {
+                  overflow: hidden;
+                }
+                
+                img {
+                  max-width: 100%;
+                  height: auto;
+                }
+                
+                .container {
+                  width: 100%;
+                  max-width: 1400px;
+                  margin: 0 auto;
+                  padding: 0 2rem;
+                }
+                
+                header {
+                  position: sticky;
+                  top: 0;
+                  z-index: 50;
+                  width: 100%;
+                  border-bottom: 1px solid #eee;
+                  background-color: rgba(255, 255, 255, 0.95);
+                  backdrop-filter: blur(10px);
+                  -webkit-backdrop-filter: blur(10px);
+                }
+                
+                .flex { display: flex; }
+                .items-center { align-items: center; }
+                .justify-between { justify-content: space-between; }
+                .justify-center { justify-content: center; }
+                .gap-2 { gap: 0.5rem; }
+                .gap-4 { gap: 1rem; }
+                .gap-6 { gap: 1.5rem; }
+                .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+                .font-bold { font-weight: 700; }
+                .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+                .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+                .grid { display: grid; }
+                .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+                .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+                .rounded-lg { border-radius: 0.5rem; }
+                .border { border: 1px solid #eee; }
+                .p-6 { padding: 1.5rem; }
+                .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+                .bg-background { background-color: #fff; }
+                .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+                .font-semibold { font-weight: 600; }
+                .text-primary { color: #0070f3; }
+                .text-muted-foreground { color: #6b7280; }
+                
+                @media (max-width: 768px) {
+                  .grid-cols-2, .grid-cols-3 {
+                    grid-template-columns: 1fr;
+                  }
+                }
+              `;
+              document.head.appendChild(style);
+              
+              // Force reload CSS if it's not applied correctly
+              setTimeout(function() {
+                var links = document.querySelectorAll('link[rel="stylesheet"]');
+                links.forEach(function(link) {
+                  var href = link.getAttribute('href');
+                  if (href) {
+                    link.setAttribute('href', href + '?t=' + new Date().getTime());
+                  }
+                });
+              }, 500);
+            })();
+          0:{"P":null,"b":"zOcinbqQCklOlipovfV4E","p":"/inbox-transaction-viewer","c":["","privacy",""],"i":false,"f":[[["",{"children":["privacy",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/inbox-transaction-viewer/_next/static/css/424b1697a7e88cb5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/inbox-transaction-viewer/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","type":"image/svg+xml","href":"/inbox-transaction-viewer/mail-icon.svg"}],["$","link",null,{"rel":"apple-touch-icon","href":"/inbox-transaction-viewer/mail-icon-large.svg"}],["$","$L2",null,{"id":"microsoft-clarity","strategy":"afterInteractive","children":"\n            (function(c,l,a,r,i,t,y){\n                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n                t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n            })(window, document, \"clarity\", \"script\", \"m9cvuprzdq\");\n          "}],["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-8CDC4BNWDF","strategy":"afterInteractive"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-8CDC4BNWDF');\n          "}],["$","$L2",null,{"id":"fix-styles","strategy":"beforeInteractive","children":"$3"}]]}],["$","body",null,{"className":"__className_fd5a2e","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"$undefined",[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["privacy",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","header",null,{"className":"sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60","children":["$","div",null,{"className":"container flex h-16 items-center justify-between max-w-7xl mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"flex items-center gap-2 font-semibold","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-mail h-5 w-5 text-primary","children":[["$","rect","18n3k1",{"width":"20","height":"16","x":"2","y":"4","rx":"2"}],["$","path","1ocrg3",{"d":"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"}],"$undefined"]}],["$","span",null,{"children":"Inbox Transaction Viewer"}]]}],["$","nav",null,{"className":"hidden md:flex gap-6","children":[["$","$L6",null,{"href":"/","className":"text-sm font-medium hover:text-primary","children":"Home"}],["$","$L6",null,{"href":"/#download","className":"text-sm font-medium hover:text-primary","children":"Download"}],["$","$L6",null,{"href":"/#instructions","className":"text-sm font-medium hover:text-primary","children":"Instructions"}],["$","$L6",null,{"href":"/#faq","className":"text-sm font-medium hover:text-primary","children":"FAQ"}],["$","$L6",null,{"href":"/#contact","className":"text-sm font-medium hover:text-primary","children":"Contact"}],["$","$L6",null,{"href":"/blog","className":"text-sm font-medium hover:text-primary","children":"Blog"}],["$","$L6",null,{"href":"/privacy","className":"text-sm font-medium text-primary","children":"Privacy"}]]}],["$","$L6",null,{"href":"https://chromewebstore.google.com/detail/inboxtransactionviewer/mailfnnagpmjbhpajaccjnhecaccceak?hl=en&authuser=0","children":"Add to Chrome","data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3","ref":null}]]}]}],["$","main",null,{"className":"flex-1 py-12 md:py-16","children":["$","div",null,{"className":"container max-w-7xl mx-auto px-4 md:px-6","children":["$","div",null,{"className":"max-w-3xl mx-auto","children":[["$","h1",null,{"className":"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6","children":"Privacy Policy"}],["$","div",null,{"className":"prose prose-gray max-w-none","children":[["$","p",null,{"className":"mb-6","children":"Thank you for using Inbox Transaction Viewer (\"the Extension\"). Your privacy is crucial to us, and this Privacy Policy details how we handle your data when you use our Chrome extension."}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"1. Information We Collect"}],["$","p",null,{"className":"mb-4","children":"The Extension collects and processes the following types of information locally on your device:"}],["$","ul",null,{"className":"list-disc pl-6 mb-6 space-y-2","children":[["$","li",null,{"children":[["$","strong",null,{"children":"Stripe Financial Data:"}]," Transaction data, customer lifetime value, subscription details, and related financial information from Stripe to provide insights directly within your Gmail interface."]}],["$","li",null,{"children":[["$","strong",null,{"children":"Email Information:"}]," Information related to customer emails to provide transaction overlays and customer insights."]}]]}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"2. How We Use Information"}],["$","p",null,{"className":"mb-4","children":"The Extension securely processes data locally on your machine to:"}],["$","ul",null,{"className":"list-disc pl-6 mb-6 space-y-2","children":[["$","li",null,{"children":"Offer seamless integration of Stripe financial data within Gmail."}],["$","li",null,{"children":"Help users quickly access their Stripe dashboard directly from within Gmail."}],["$","li",null,{"children":"Enhance productivity with immediate financial insights."}]]}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"3. Data Sharing and Disclosure"}],["$","p",null,{"className":"mb-6","children":"The Extension leverages direct API calls to Stripe, ensuring that all data remains between you and Stripe. Data is not transmitted externally, and we do not share any collected information with third parties."}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"4. Data Security"}],["$","p",null,{"className":"mb-4","children":"Security is integral to the Extension's design, as it uses robust encryption and follows stringent data protection standards:"}],["$","ul",null,{"className":"list-disc pl-6 mb-6 space-y-2","children":[["$","li",null,{"children":"All financial data remains local, ensuring your information is not exposed to intermediary servers."}],["$","li",null,{"children":"The extension is built to minimize data exposure risks and uphold privacy."}]]}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"5. User Control and Data Retention"}],["$","p",null,{"className":"mb-4","children":"Users have full control over the Extension:"}],["$","ul",null,{"className":"list-disc pl-6 mb-6 space-y-2","children":[["$","li",null,{"children":"You can disable the Extension or revoke its permissions at any time."}],["$","li",null,{"children":"All data processed by the Extension remains on your device and can be removed by uninstalling the Extension."}]]}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"6. Changes to the Privacy Policy"}],["$","p",null,{"className":"mb-6","children":"We may update this Privacy Policy occasionally to reflect changes in our practices. If we make significant changes, we will notify you by updating the \"Last Updated\" date or through other means as appropriate."}],["$","h2",null,{"className":"text-2xl font-semibold mt-8 mb-4","children":"7. Contact Us"}],["$","p",null,{"className":"mb-6","children":["If you have any questions about this Privacy Policy or the Extension, please contact us at:"," ",["$","a",null,{"href":"mailto:info@inboxtransactionviewer.com","className":"text-primary hover:underline","children":"info@inboxtransactionviewer.com"}]]}],["$","hr",null,{"className":"my-10 border-gray-200"}],["$","p",null,{"className":"mb-6","children":"We partner with Microsoft Clarity and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our products/services. Website usage data is captured using first and third-party cookies and other tracking technologies to determine the popularity of products/services and online activity. Additionally, we use this information for site optimization, fraud/security purposes, and advertising. For more information about how Microsoft collects and uses your data, visit the Microsoft Privacy Statement."}]]}]]}]}]}],["$","footer",null,{"className":"border-t py-12 md:py-16 bg-gray-100 w-full","children":["$","div",null,{"className":"container max-w-7xl mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-8 mb-8","children":[["$","div",null,{"children":[["$","div",null,{"className":"flex items-center gap-2 font-semibold mb-4","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-mail h-5 w-5 text-primary","children":[["$","rect","18n3k1",{"width":"20","height":"16","x":"2","y":"4","rx":"2"}],["$","path","1ocrg3",{"d":"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"}],"$undefined"]}],["$","span",null,{"children":"Inbox Transaction Viewer"}]]}],["$","p",null,{"className":"text-sm text-muted-foreground","children":"© 2024 inboxtransactionviewer. All rights reserved."}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium mb-4","children":"Navigation"}],["$","ul",null,{"className":"space-y-2","children":[["$","li",null,{"children":["$","$L6",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L6",null,{"href":"/#download","className":"text-sm text-muted-foreground hover:text-primary","children":"Download"}]}],["$","li",null,{"children":["$","$L6",null,{"href":"/#instructions","className":"text-sm text-muted-foreground hover:text-primary","children":"Instructions"}]}],["$","li",null,{"children":["$","$L6",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium mb-4","children":"Legal"}],["$","ul",null,{"className":"space-y-2","children":[["$","li",null,{"children":["$","$L6",null,{"href":"/privacy","className":"text-sm text-muted-foreground hover:text-primary","children":"Privacy"}]}],["$","li",null,{"children":["$","$L6",null,{"href":"#","className":"text-sm text-muted-foreground hover:text-primary","children":"Terms"}]}]]}]]}]]}],["$","div",null,{"className":"border-t pt-6","children":[["$","p",null,{"className":"text-xs text-muted-foreground mb-3","style":{"fontSize":"0.75rem"},"children":"Inbox Transaction Viewer is an independent extension and is not endorsed, certified. Google LLC, Stripe, Inc., or any of their affiliates. \"Chrome\", \"Gmail\", and \"Stripe\" are registered trademarks of their respective owners. Use of these names, trademarks, and brands does not imply endorsement by their respective holders."}],["$","p",null,{"className":"text-xs text-muted-foreground","style":{"fontSize":"0.75rem"},"children":"We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement has more details."}]]}]]}]}]]}],"$undefined",null,["$","$L7",null,{"children":["$L8","$L9",null]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","oJfJU0GvxYXUoj6Ovakmx",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+9:null
+d:[["$","title","0",{"children":"Privacy Policy | Inbox Transaction Viewer"}],["$","meta","1",{"name":"description","content":"Privacy policy for the Inbox Transaction Viewer Chrome extension, detailing how we handle your data and privacy."}],["$","meta","2",{"name":"author","content":"Inbox Transaction Viewer Team"}],["$","link","3",{"rel":"manifest","href":"/inbox-transaction-viewer/site.webmanifest","crossOrigin":"$undefined"}],["$","meta","4",{"name":"keywords","content":"gmail extension,stripe integration,customer service,email productivity,transaction viewer"}],["$","meta","5",{"name":"creator","content":"Inbox Transaction Viewer"}],["$","meta","6",{"name":"publisher","content":"Inbox Transaction Viewer"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","link","8",{"rel":"canonical","href":"https://ipekai.com/inbox-transaction-viewer/privacy/"}],["$","meta","9",{"property":"og:title","content":"Privacy Policy | Inbox Transaction Viewer"}],["$","meta","10",{"property":"og:description","content":"Privacy policy for the Inbox Transaction Viewer Chrome extension, detailing how we handle your data and privacy."}],["$","meta","11",{"property":"og:url","content":"https://ipekai.com/inbox-transaction-viewer/privacy/"}],["$","meta","12",{"property":"og:image","content":"https://ipekai.com/inbox-transaction-viewer/og-image.png"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Privacy Policy | Inbox Transaction Viewer"}],["$","meta","15",{"name":"twitter:description","content":"Privacy policy for the Inbox Transaction Viewer Chrome extension, detailing how we handle your data and privacy."}],["$","meta","16",{"name":"twitter:image","content":"https://ipekai.com/inbox-transaction-viewer/og-image.png"}],["$","link","17",{"rel":"icon","href":"/inbox-transaction-viewer/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]

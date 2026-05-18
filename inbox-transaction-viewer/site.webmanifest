@@ -1,0 +1,19 @@
+{
+  "name": "Inbox Transaction Viewer",
+  "short_name": "InboxTV",
+  "icons": [
+    {
+      "src": "/inbox-transaction-viewer/mail-icon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/inbox-transaction-viewer/mail-icon-large.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0070f3",
+  "background_color": "#ffffff",
+  "display": "standalone"
+} 
